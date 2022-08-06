@@ -57,8 +57,8 @@ export default class Command {
       name: 'memos',
       message: 'Choose a note you want to delete:',
       choices: memos,
-      async onSubmit (_name, _value, a) {
-        id = await a.selected.value
+      async onSubmit (_name, _value, self) {
+        id = await self.selected.value
       }
     })
 
@@ -85,8 +85,8 @@ export default class Command {
       name: 'memo',
       message: 'Choose a note you want to edit:',
       choices: memos,
-      async onSubmit (_name, _value, a) {
-        id = await a.selected.value
+      async onSubmit (_name, _value, self) {
+        id = await self.selected.value
       }
     })
 
